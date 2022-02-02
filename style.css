@@ -1,0 +1,84 @@
+:root {
+    --header: orange;
+    --aside: gray;
+    --footer: black;
+    --main: chartreuse;
+}
+
+body {
+    display: grid;
+    min-height: 100vh;
+    /* background-color: chartreuse; */
+    grid-template-areas: "sidebar header sidebar2"
+                         "sidebar main sidebar2"
+                         "sidebar footer sidebar2";
+    grid-template-rows: 70px 1fr 300px;
+    grid-template-columns: 150px 1fr 150px;
+}
+
+header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 140px 600px 1fr 400px;
+}
+
+aside {
+    grid-area: sidebar;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+section {
+    grid-area: sidebar2;
+}
+
+img {
+    margin: 0 auto;
+    justify-self: center;
+}
+
+header img {
+    width: 120px;
+    position: relative;
+    align-self: center;
+    justify-self: center;
+}
+
+ul {
+    display: inline;
+    align-self: center;
+}
+
+footer ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+li {
+    display: inline-block;
+    font-size: 14px;
+    margin: 0 10px;
+}
+
+main img {
+    width: 100%;
+    position: relative;
+    align-self: center;
+}
+
+.right {
+    justify-self: right;
+    padding: 15px;
+    margin: 0 10px;
+}
+
+.options {
+    display: grid;
+    text-align: center;
+}
